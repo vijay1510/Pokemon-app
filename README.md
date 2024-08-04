@@ -1,30 +1,87 @@
-# React + TypeScript + Vite
+# Pokemon App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A brief description of what this project is about.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
+   \`\`\`bash
+   git clone https://github.com/yourusername/pokemon-app.git
+   \`\`\`
+2. Navigate to the project directory:
+   \`\`\`bash
+   cd pokemon-app
+   \`\`\`
+3. Install the dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-- Configure the top-level `parserOptions` property like this:
+## Usage
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Start the development server:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+2. Open your browser and navigate to \`http://localhost:3000\` to view the application.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Project Structure
+
+\`\`\`
+pokemon-app/
+├── src/
+│ ├── components/
+│ │ ├── App.tsx
+│ │ ├── Home.tsx
+│ │ ├── About.tsx
+│ │ ├── NotFound.tsx
+│ │ └── Route.tsx
+│ ├── index.css
+│ ├── main.tsx
+│ └── index.html
+├── public/
+│ ├── index.html
+│ └── ...
+├── package.json
+├── tsconfig.json
+└── README.md
+\`\`\`
+
+- **src/**: Contains the source code of the application.
+  - **components/**: Contains the React components.
+    - **App.tsx**: The main application component.
+    - **Home.tsx**: The home page component.
+    - **About.tsx**: The about page component.
+    - **NotFound.tsx**: The 404 error page component.
+    - **Route.tsx**: Defines the routes for the application.
+  - **index.css**: CSS file for styling the application using Tailwind CSS.
+  - **main.tsx**: The entry point for the React application.
+- **public/**: Contains static files such as HTML.
+  - **index.html**: The main HTML file.
+- **package.json**: Contains metadata about the project and its dependencies.
+- **tsconfig.json**: Configuration file for TypeScript.
+
+## Technologies Used
+
+- **Vite**: Next Generation Frontend Tooling.
+- **React**: A JavaScript library for building user interfaces.
+- **React Router**: A library for routing in React applications.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Tailwind CSS**: A utility-first CSS framework.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -16,11 +16,12 @@ type PokemonDetails = {
   };
   abilities: { ability: { name: string } }[];
   types: { type: { name: string } }[];
+  moves: { move: { name: string } }[];
 };
 
 const usePokemon = (name: string | undefined) => {
-  const fetchPokemonDetails = () => {
-    return axios
+  const fetchPokemonDetails = async () => {
+    return await axios
       .get<PokemonDetails>('https://pokeapi.co/api/v2/pokemon/' + name)
       .then((response) => response.data);
   };
@@ -28,8 +29,7 @@ const usePokemon = (name: string | undefined) => {
   return useQuery<PokemonDetails, Error>({
     queryKey: ['pokemon', name],
     queryFn: fetchPokemonDetails,
-    staleTime: 1000 * 60 * 5, // 5 minutes
-    refetchInterval: 1000 * 60 * 5, // 5 minutes
+    keepPreviousData: true,
   });
 };
 

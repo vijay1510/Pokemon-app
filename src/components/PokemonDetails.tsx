@@ -51,13 +51,22 @@ export const PokemonDetails = () => {
                 ))}
               </ul>
             </div>
+
+            <div className='mt-4'>
+              <h3 className='text-lg font-semibold text-gray-900'>Moves</h3>
+              <ul className='list-disc list-inside mt-2 text-gray-500'>
+                {data.moves.slice(0, 4).map((move) => (
+                  <li key={move.move.name}>{move.move.name}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div className='text-center mt-4'>
         <button
           onClick={() => navigate('/')}
-          className='px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50'
+          className='px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition-all'
         >
           Back
         </button>

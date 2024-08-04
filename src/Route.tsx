@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { ErrorPage } from './components/ErrorPage';
 import { Home } from './components/Home';
-import { Pokemon } from './components/Pokemon';
+import { PokemonDetails } from './components/PokemonDetails';
 
 const router = createBrowserRouter([
   {
@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     element: <Home />,
   },
-  { path: '/:id', element: <Pokemon /> },
+  { path: '/:name', element: <PokemonDetails /> },
 ]);
 
 export default router;

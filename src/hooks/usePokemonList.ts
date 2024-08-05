@@ -19,8 +19,8 @@ const usePokemonList = () => {
     'https://pokeapi.co/api/v2/pokemon?offset=0&limit=20'
   );
 
-  const fetchPokemonList = (url: string) => {
-    return axios.get<PokemonList>(url).then((response) => response.data);
+  const fetchPokemonList = async (url: string) => {
+    return await axios.get<PokemonList>(url).then((response) => response.data);
   };
 
   const query = useQuery<PokemonList, Error>({

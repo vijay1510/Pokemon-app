@@ -13,7 +13,7 @@ export const PokemonList = () => {
   return (
     <div className='container mx-auto p-4'>
       <h1 className='mt-4 mb-8 text-red-600 text-3xl text-center'>
-        Pokemon List
+        Pokémon List
       </h1>
       <div className='flex flex-wrap justify-center'>
         {data.results.map((pokemon) => (
@@ -31,14 +31,14 @@ export const PokemonList = () => {
       <div className='text-center mt-10'>
         <button
           onClick={goToPreviousPage}
-          disabled={data.previous === null}
+          disabled={!data.previous}
           className='px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-700 mr-5 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all'
         >
           Previous
         </button>
         <button
           onClick={goToNextPage}
-          disabled={data.next === null}
+          disabled={!data.next}
           className='px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-700 mr-5 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all'
         >
           Next

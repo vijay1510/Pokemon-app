@@ -1,6 +1,7 @@
 # Pokemon App
 
-A brief description of what this project is about.
+A mini Pokémon explorer app using React and TypeScript.
+The app will have two main pages: a Pokémon list page and a Pokémon detail page.
 
 ## Table of Contents
 

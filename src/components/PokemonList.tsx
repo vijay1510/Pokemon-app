@@ -6,7 +6,7 @@ export const PokemonList = () => {
   const { data, isLoading, error, goToNextPage, goToPreviousPage } =
     usePokemonList();
 
-  if (isLoading) return <Loader />;
+  if (isLoading) return <h1>Loading...</h1>;
 
   if (error) return <h1>{error.message}</h1>;
 
